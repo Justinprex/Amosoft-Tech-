@@ -4,22 +4,97 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Amosoft Technologies</title>
-    <link rel="stylesheet" href="css">
-    <script defer src="js"></script>
+    <style>
+        :root {
+            --bg-light: #ffffff;
+            --bg-dark: #111111;
+            --text-light: #000000;
+            --text-dark: #ffffff;
+            --primary: gold;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-light);
+            transition: background 0.3s, color 0.3s;
+            margin: 0;
+            padding: 0;
+        }
+
+        .dark-mode {
+            background-color: var(--bg-dark);
+            color: var(--text-dark);
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            background: var(--primary);
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            padding: 0;
+            margin: 0;
+        }
+
+        .nav-links li {
+            margin: 0 15px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+        }
+
+        #theme-toggle {
+            background: none;
+            border: none;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 50px;
+        }
+
+        .placeholder {
+            text-align: center;
+            padding: 30px;
+            border: 1px solid var(--primary);
+            margin: 20px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background: var(--primary);
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <nav>
-            <div class="logo">Amosoft</div>
-            <ul class="nav-links">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Portfolio</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-            <button id="theme-toggle">🌙</button>
-        </nav>
+        <div class="logo">Amosoft</div>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+        <button id="theme-toggle">🌙</button>
     </header>
 
     <section class="hero">
@@ -35,5 +110,25 @@
     <footer>
         <p>&copy; 2025 Amosoft Technologies. All rights reserved.</p>
     </footer>
+
+    <script>
+        const themeToggle = document.getElementById("theme-toggle");
+        const body = document.body;
+
+        themeToggle.addEventListener("click", () => {
+            body.classList.toggle("dark-mode");
+            const isDark = body.classList.contains("dark-mode");
+            localStorage.setItem("theme", isDark ? "dark" : "light");
+            themeToggle.textContent = isDark ? "☀️" : "🌙";
+        });
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const savedTheme = localStorage.getItem("theme");
+            if (savedTheme === "dark") {
+                body.classList.add("dark-mode");
+                themeToggle.textContent = "☀️";
+            }
+        });
+    </script>
 </body>
 </html>
