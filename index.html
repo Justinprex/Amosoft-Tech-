@@ -52,6 +52,7 @@
 
         .contact-section {
             padding: 50px 20px;
+            border: 1px solid var(--border-color);
         }
 
         .contact-card {
@@ -78,10 +79,17 @@
 
         .service-section {
             padding: 50px 0;
+            border: 1px solid var(--border-color);
         }
 
         .service-content {
             padding: 20px;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
         }
     </style>
 </head>
@@ -89,7 +97,7 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container">
-            <a class="navbar-brand" href="#">Amosoft</a>
+            <h1><a class="navbar-brand" href="#">AMOSOFT TECH</a></h1>
             <button id="theme-toggle" class="btn btn-dark">🌙</button>
         </div>
     </nav>
@@ -99,6 +107,8 @@
         <h1>Welcome to Amosoft Technologies</h1>
         <p>Innovative solutions in Web Development, AI, and Automation.</p>
     </section>
+
+    <br>
 
     <!-- About Us Section -->
     <section class="service-section container">
@@ -118,10 +128,12 @@
                 <p>We have a team of highly skilled professionals who are dedicated to delivering innovative and scalable digital solutions. Our expertise spans across various domains, ensuring that we can meet the unique needs of each client.</p>
             </div>
             <div class="col-md-6 text-center">
-                <img src="about-image-placeholder.jpg" alt="About Us Image" class="img-fluid rounded">
+                <img src="img.png" alt="About Us Image" class="img-fluid rounded">
             </div>
         </div>
     </section>
+
+    <br>
 
     <!-- Services Section -->
     <section class="service-section container">
@@ -145,103 +157,93 @@
             </div>
             <div class="col-md-6 text-center">
                 <img src="max.jpg" alt="Service Image" class="img-fluid rounded">
-            </div>
-        </div>
-        <div class="row align-items-center mt-4">
-            <div class="col-md-4 text-center">
-                <img src="service-image-placeholder1.jpg" alt="Service Image 1" class="img-fluid rounded">
-            </div>
-            <div class="col-md-4 text-center">
-                <img src="service-image-placeholder2.jpg" alt="Service Image 2" class="img-fluid rounded">
-            </div>
-            <div class="col-md-4 text-center">
-                <img src="service-image-placeholder3.jpg" alt="Service Image 3" class="img-fluid rounded">
+                <img src="image.jpg" alt="" class="img-fluid rounded">
             </div>
         </div>
     </section>
+
+    <br>
 
     <!-- Portfolio Section -->
     <section id="portfolio" class="container text-center my-5">
         <h2>Our Portfolio</h2>
         <p>Amosoft Technologies has been a leader in web development since 2010, creating high-quality websites, decompiling files, and building prediction platforms.</p>
-        <div class="row">
-            <div class="col-md-4 portfolio">
+        <div class="grid-container">
+            <div class="portfolio">
                 <img src="image.jpeg" alt="Project 1">
                 <h4>Web Development</h4>
                 <p>Created high-performance websites for various industries.</p>
-                <a href="#" class="btn btn-primary">View Project</a>
+                <a href="mailto:oluwajustifymicebliss@gmail.com" class="btn btn-primary">View Project</a>
             </div>
-            <div class="col-md-4 portfolio">
+            <div class="portfolio">
                 <img src="vb_decompiler_usability_103.png" alt="Project 2">
                 <h4>Decompilation Services</h4>
                 <p>Reverse-engineered and optimized existing codebases.</p>
-                <a href="#" class="btn btn-primary">View Project</a>
+                <a href="mailto:oluwajustifymicebliss@gmail.com" class="btn btn-primary">View Project</a>
             </div>
-            <div class="col-md-4 portfolio">
+            <div class="portfolio">
                 <img src="IMG_20250228_125300_523.png" alt="Project 3">
                 <h4>Prediction Websites</h4>
                 <p>Developed AI-powered sports prediction platforms.</p>
-                <a href="#" class="btn btn-primary">View Project</a>
+                <a href="mailto:oluwajustifymicebliss@gmail.com" class="btn btn-primary">View Project</a>
             </div>
-        </div>
-        <div class="row mt-4">
-            <div class="col-md-4 portfolio">
+            <div class="portfolio">
                 <img src="preview-xl.jpg" alt="Project 4">
                 <h4>eCommerce Development</h4>
                 <p>Designed and developed scalable online stores with payment integrations.</p>
-                <a href="#" class="btn btn-primary">View Project</a>
+                <a href="mailto:oluwajustifymicebliss@gmail.com" class="btn btn-primary">View Project</a>
             </div>
-            <div class="col-md-4 portfolio">
+            <div class="portfolio">
                 <img src="winter_2x.png" alt="Project 5">
                 <h4>Enterprise Software</h4>
                 <p>Created large-scale enterprise solutions for various industries.</p>
-                <a href="#" class="btn btn-primary">View Project</a>
+                <a href="mailto:oluwajustifymicebliss@gmail.com" class="btn btn-primary">View Project</a>
             </div>
-            <div class="col-md-4 portfolio">
+            <div class="portfolio">
                 <img src="5.jpg" alt="Project 6">
                 <h4>Mobile App Development</h4>
                 <p>Built hybrid and native mobile applications.</p>
-                <a href="#" class="btn btn-primary">View Project</a>
+                <a href="mailto:oluwajustifymicebliss@gmail.com" class="btn btn-primary">View Project</a>
             </div>
         </div>
     </section>
+
+    <br>
 
     <!-- Contact Section -->
     <section class="contact-section container">
         <h1 class="text-center mb-4">Contact Amosoft Technologies</h1>
         <p class="text-center">We provide full customer support service. Reach out to us anytime!</p>
 
-        <div class="row">
-            <div class="col-md-6">
-                <div class="contact-card">
-                    <h3>Social Media</h3>
-                    <div class="social-icons">
-                        <a href="#" class="btn btn-primary">Facebook</a>
-                        <a href="#" class="btn btn-info">Twitter</a>
-                        <a href="#" class="btn btn-danger">Instagram</a>
-                        <a href="#" class="btn btn-primary">LinkedIn</a>
-                    </div>
+        <div class="grid-container">
+            <div class="contact-card">
+                <h3>Social Media</h3>
+                <div class="social-icons">
+                    <a href="#" class="btn btn-primary">Facebook</a>
+                    <a href="#" class="btn btn-info">Twitter</a>
+                    <a href="#" class="btn btn-danger">Instagram</a>
+                    <a href="#" class="btn btn-primary">LinkedIn</a>
                 </div>
             </div>
-            <div class="col-md-6">
-                <div class="contact-card">
-                    <h3>Send Us a Message</h3>
-                    <form>
-                        <div class="mb-3">
-                            <input type="text" class="form-control" placeholder="Your Name" required>
-                        </div>
-                        <div class="mb-3">
-                            <input type="email" class="form-control" placeholder="Your Email" required>
-                        </div>
-                        <div class="mb-3">
-                            <textarea class="form-control" placeholder="Your Message" rows="4" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-success w-100">Submit</button>
-                    </form>
-                </div>
+            <div class="contact-card">
+                <h3>Send Us a Message</h3>
+                <form>
+                    <div class="mb-3">
+                        <input type="text" class="form-control" placeholder="Your Name" required>
+                    </div>
+                    <div class="mb-3">
+                        <input type="email" class="form-control" placeholder="Your Email" required>
+                    </div>
+                    <div class="mb-3">
+                        <textarea class="form-control" placeholder="Your Message" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-success w-100">Submit</button>
+                </form>
             </div>
         </div>
     </section>
+
+    <br>
 
     <!-- Footer -->
     <footer class="text-center py-3 mt-4 bg-dark text-white">
